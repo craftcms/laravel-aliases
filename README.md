@@ -1,4 +1,4 @@
-# A Laravel wrapper around yiisoft/aliases
+# A Laravel Facade around yiisoft/aliases
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/craftcms/laravel-aliases.svg?style=flat-square)](https://packagist.org/packages/craftcms/laravel-aliases)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/craftcms/laravel-aliases/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/craftcms/laravel-aliases/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,14 +6,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/craftcms/laravel-aliases.svg?style=flat-square)](https://packagist.org/packages/craftcms/laravel-aliases)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-aliases.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-aliases)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -23,37 +15,16 @@ You can install the package via composer:
 composer require craftcms/laravel-aliases
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-aliases-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-aliases-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-aliases-views"
-```
-
 ## Usage
 
 ```php
-$aliases = new Craft\Aliases();
-echo $aliases->echoPhrase('Hello, Craft!');
+use Craft\Aliases\Facades\Aliases;
+
+Aliases::set('@root', __DIR__);
+Aliases::set('@vendor', '@root/vendor');
+Aliases::set('@bin', '@vendor/bin');
+
+echo Aliases::get('@bin/phpunit'); // /path/to/vendor/bin/phpunit
 ```
 
 ## Testing

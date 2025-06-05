@@ -1,6 +1,6 @@
 {
     "name": "craftcms/laravel-aliases",
-    "description": "A Laravel wrapper around yiisoft/aliases",
+    "description": "A Laravel Facade around yiisoft/aliases",
     "keywords": [
         "craftcms",
         "yii",
@@ -40,8 +40,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Craft\\Aliases\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Craft\\Aliases\\Tests\\": "tests/"
         }
     },
     "scripts": {
