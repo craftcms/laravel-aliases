@@ -2,13 +2,13 @@
 
 namespace Craft\Aliases;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
+use Yiisoft\Aliases\Aliases;
 
-class AliasesServiceProvider extends PackageServiceProvider
+class AliasesServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function register(): void
     {
-        $package->name('laravel-aliases');
+        $this->app->singleton('aliases', fn () => new Aliases);
     }
 }
