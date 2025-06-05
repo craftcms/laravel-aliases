@@ -1,11 +1,11 @@
-# A Laravel Facade around yiisoft/aliases
+# Aliases
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/craftcms/laravel-aliases.svg?style=flat-square)](https://packagist.org/packages/craftcms/laravel-aliases)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/craftcms/laravel-aliases/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/craftcms/laravel-aliases/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/craftcms/laravel-aliases/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/craftcms/laravel-aliases/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/craftcms/laravel-aliases.svg?style=flat-square)](https://packagist.org/packages/craftcms/laravel-aliases)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A Laravel Facade around yiisoft/aliases
 
 ## Installation
 
