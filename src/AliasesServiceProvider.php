@@ -9,6 +9,6 @@ class AliasesServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->singleton('aliases', fn () => new Aliases);
+        $this->app->singleton(Aliases::class, fn () => new Aliases);
     }
 }

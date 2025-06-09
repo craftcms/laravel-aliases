@@ -11,6 +11,6 @@ class Aliases extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'aliases';
+        return \Yiisoft\Aliases\Aliases::class;
     }
 }
