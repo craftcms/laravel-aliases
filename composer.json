@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Craft\\Aliases\\": "src/",
-            "Craft\\Aliases\\Database\\Factories\\": "database/factories/"
+            "CraftCms\\Aliases\\": "src/",
+            "CraftCms\\Aliases\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Craft\\Aliases\\Tests\\": "tests/"
+            "CraftCms\\Aliases\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Craft\\Aliases\\AliasesServiceProvider"
+                "CraftCms\\Aliases\\AliasesServiceProvider"
             ],
             "aliases": {
-                "Aliases": "Craft\\Aliases\\Facades\\Aliases"
+                "Aliases": "CraftCms\\Aliases\\Facades\\Aliases"
             }
         }
     },

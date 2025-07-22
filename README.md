@@ -18,7 +18,7 @@ composer require craftcms/laravel-aliases
 ## Usage
 
 ```php
-use Craft\Aliases\Facades\Aliases;
+use CraftCms\Aliases\Facades\Aliases;
 
 Aliases::set('@root', __DIR__);
 Aliases::set('@vendor', '@root/vendor');

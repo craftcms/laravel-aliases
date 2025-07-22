@@ -1,8 +1,8 @@
 <?php
 
-namespace Craft\Aliases\Tests;
+namespace CraftCms\Aliases\Tests;
 
-use Craft\Aliases\AliasesServiceProvider;
+use CraftCms\Aliases\AliasesServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

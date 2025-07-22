@@ -1,5 +1,5 @@
 <?php
 
-use Craft\Aliases\Tests\TestCase;
+use CraftCms\Aliases\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Craft\Aliases\Facades;
+namespace CraftCms\Aliases\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
