@@ -30,9 +30,9 @@ final class Aliases
     }
 
     /**
-     * @param string[] $aliases Aliases to be translated.
+     * @param  string[]  $aliases  Aliases to be translated.
      * @return string[] The paths corresponding to the aliases.
-     * {@see \Yiisoft\Aliases\Aliases::getArray}
+     *                  {@see \Yiisoft\Aliases\Aliases::getArray}
      */
     public static function getArray(array $aliases): array
     {
@@ -41,7 +41,7 @@ final class Aliases
 
     /**
      * @return array<string, string>
-     * {@see \Yiisoft\Aliases\Aliases::getAll}
+     *                               {@see \Yiisoft\Aliases\Aliases::getAll}
      */
     public static function getAll(): array
     {
