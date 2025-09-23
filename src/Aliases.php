@@ -29,15 +29,25 @@ final class Aliases
         }
     }
 
-    /** {@see \Yiisoft\Aliases\Aliases::getArray} */
+    /**
+     * @param string[] $aliases Aliases to be translated.
+     * @return string[] The paths corresponding to the aliases.
+     * {@see \Yiisoft\Aliases\Aliases::getArray}
+     */
     public static function getArray(array $aliases): array
     {
         return app(YiiAliases::class)->getArray($aliases);
     }
 
-    /** {@see \Yiisoft\Aliases\Aliases::getAll} */
+    /**
+     * @return array<string, string>
+     * {@see \Yiisoft\Aliases\Aliases::getAll}
+     */
     public static function getAll(): array
     {
-        return app(YiiAliases::class)->getAll();
+        /** @var array<string, string> $all */
+        $all = app(YiiAliases::class)->getAll();
+
+        return $all;
     }
 }
