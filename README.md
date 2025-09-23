@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/craftcms/laravel-aliases/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/craftcms/laravel-aliases/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/craftcms/laravel-aliases.svg?style=flat-square)](https://packagist.org/packages/craftcms/laravel-aliases)
 
-A Laravel Facade around yiisoft/aliases
+A Laravel wrapper around yiisoft/aliases
 
 ## Installation
 
@@ -18,7 +18,7 @@ composer require craftcms/laravel-aliases
 ## Usage
 
 ```php
-use CraftCms\Aliases\Facades\Aliases;
+use CraftCms\Aliases\Aliases;
 
 Aliases::set('@root', __DIR__);
 Aliases::set('@vendor', '@root/vendor');

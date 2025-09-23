@@ -1,6 +1,6 @@
 <?php
 
-use CraftCms\Aliases\Facades\Aliases;
+use CraftCms\Aliases\Aliases;
 
 arch('it will not use debugging functions')
     ->expect(['dd', 'dump', 'ray'])
@@ -9,7 +9,6 @@ arch('it will not use debugging functions')
 it('is a singleton', function () {
     expect(app(\Yiisoft\Aliases\Aliases::class))->toBe(app(\Yiisoft\Aliases\Aliases::class));
     expect(app(\Yiisoft\Aliases\Aliases::class))->toBe(app('aliases'));
-    expect(Aliases::getFacadeRoot())->toBe(app('aliases'));
 });
 
 it('can set and get an alias', function () {
@@ -24,4 +23,8 @@ it('can inject', function () {
     expect(app()->call(function (\Yiisoft\Aliases\Aliases $aliases) {
         return $aliases->get('@foo');
     }))->toBe('bar');
+});
+
+it('returns false when an alias doesn\'t exist', function () {
+    expect(Aliases::get('@foo'))->toBeFalse();
 });
