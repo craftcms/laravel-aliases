@@ -1,6 +1,6 @@
 {
     "name": "craftcms/laravel-aliases",
-    "description": "A Laravel Facade around yiisoft/aliases",
+    "description": "A Laravel wrapper around yiisoft/aliases",
     "keywords": [
         "craftcms",
         "yii",
