@@ -20,11 +20,15 @@ final class Aliases
     }
 
     /** {@see \Yiisoft\Aliases\Aliases::get} */
-    public static function get(string $alias): string|false
+    public static function get(string $alias, bool $throw = true): string|false
     {
         try {
             return app(YiiAliases::class)->get($alias);
-        } catch (InvalidArgumentException) {
+        } catch (InvalidArgumentException $e) {
+            if ($throw) {
+                throw $e;
+            }
+
             return false;
         }
     }

@@ -25,6 +25,12 @@ it('can inject', function () {
     }))->toBe('bar');
 });
 
-it('returns false when an alias doesn\'t exist', function () {
+it('throws when an alias doesn\'t exist', function () {
+    $this->expectException(\InvalidArgumentException::class);
+
     expect(Aliases::get('@foo'))->toBeFalse();
+});
+
+it('returns false when an alias doesn\'t exist and throwException is false', function () {
+    expect(Aliases::get('@foo', false))->toBeFalse();
 });
